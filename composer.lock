@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4294996419d5591f45ef668b883168a5",
+    "hash": "85c7822a798732b0c5cdc19c8dfe0c29",
     "packages": [
         {
             "name": "doctrine/common",
@@ -259,6 +259,42 @@
             "time": "2012-07-29 11:22:34"
         },
         {
+            "name": "facebook/xhprof",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facebook/xhprof.git",
+                "reference": "ec8b884ffdae5dfa5e1e271ab6762115123989c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facebook/xhprof/zipball/ec8b884ffdae5dfa5e1e271ab6762115123989c5",
+                "reference": "ec8b884ffdae5dfa5e1e271ab6762115123989c5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "xhprof_lib/utils/xhprof_lib.php",
+                    "xhprof_lib/utils/xhprof_runs.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "XHProf: A Hierarchical Profiler for PHP",
+            "homepage": "http://pecl.php.net/package/xhprof",
+            "keywords": [
+                "performance",
+                "profiling"
+            ],
+            "time": "2013-08-09 16:22:45"
+        },
+        {
             "name": "friendsofsymfony/user-bundle",
             "version": "v1.3.3",
             "target-dir": "FOS/UserBundle",
@@ -327,98 +363,6 @@
             "time": "2013-09-23 08:24:12"
         },
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.7.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b170b028c6bb5799640e46c8803015b0f9a45ed9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b170b028c6bb5799640e46c8803015b0f9a45ed9",
-                "reference": "b170b028c6bb5799640e46c8803015b0f9a45ed9",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3",
-                "symfony/event-dispatcher": ">=2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
-            },
-            "require-dev": {
-                "doctrine/cache": "*",
-                "monolog/monolog": "1.*",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "1.0.*",
-                "symfony/class-loader": "*",
-                "zendframework/zend-cache": "2.0.*",
-                "zendframework/zend-log": "2.0.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Guzzle\\Tests": "tests/",
-                    "Guzzle": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
-                }
-            ],
-            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2013-10-02 20:47:00"
-        },
-        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.0",
             "target-dir": "Incenteev/ParameterHandler",
@@ -472,16 +416,16 @@
         },
         {
             "name": "jdorn/sql-formatter",
-            "version": "v1.2.16",
+            "version": "v1.2.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "8859d664737492d313c34796731b35eca851b362"
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/8859d664737492d313c34796731b35eca851b362",
-                "reference": "8859d664737492d313c34796731b35eca851b362",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
                 "shasum": ""
             },
             "require": {
@@ -518,7 +462,57 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2013-11-27 22:51:13"
+            "time": "2014-01-12 16:20:24"
+        },
+        {
+            "name": "jns/xhprof-bundle",
+            "version": "dev-master",
+            "target-dir": "Jns/Bundle/XhprofBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonaswouters/XhprofBundle.git",
+                "reference": "96df7fbc3c9265e021319f900ea5de6b7dc6ab69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonaswouters/XhprofBundle/zipball/96df7fbc3c9265e021319f900ea5de6b7dc6ab69",
+                "reference": "96df7fbc3c9265e021319f900ea5de6b7dc6ab69",
+                "shasum": ""
+            },
+            "require": {
+                "facebook/xhprof": "*",
+                "php": ">=5.3.2",
+                "symfony/dependency-injection": "2.*",
+                "symfony/http-kernel": "2.*"
+            },
+            "suggest": {
+                "doctrine/orm": "Persist details in a storage via doctrine",
+                "ext-xhprof": "Hierarchical Profiler for PHP"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Jns\\Bundle\\XhprofBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Jonas Wouters",
+                    "email": "hello@jonaswouters.be"
+                }
+            ],
+            "description": "Symfony JnsXhprofBundle",
+            "homepage": "https://github.com/jonaswouters/XhprofBundle",
+            "keywords": [
+                "xhprof"
+            ],
+            "time": "2014-02-06 14:04:51"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -924,64 +918,17 @@
             "time": "2013-08-21 18:09:35"
         },
         {
-            "name": "snide/monitoring",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pdenis/monitoring.git",
-                "reference": "d455c252aff92a30b314f1b906bf0f9277928f46"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pdenis/monitoring/zipball/d455c252aff92a30b314f1b906bf0f9277928f46",
-                "reference": "d455c252aff92a30b314f1b906bf0f9277928f46",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/guzzle": "v3.7.4",
-                "php": ">=5.3.3",
-                "symfony/filesystem": "2.3.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Snide\\Monitoring": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pascal DENIS",
-                    "email": "pascal.denis.75@gmail.com"
-                }
-            ],
-            "description": "Monitoring helper library",
-            "homepage": "http://github.com/pdenis/monitoring",
-            "keywords": [
-                "library",
-                "monitoring",
-                "snide"
-            ],
-            "time": "2013-12-30 20:55:00"
-        },
-        {
             "name": "snide/php-scrutinizer-client",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdenis/scrutinizer-client.git",
-                "reference": "99fe297a44535dabd69954bf35f32cf92e321323"
+                "reference": "6c01cb571e3dd8a6d2aae466c395ca59908667ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdenis/scrutinizer-client/zipball/99fe297a44535dabd69954bf35f32cf92e321323",
-                "reference": "99fe297a44535dabd69954bf35f32cf92e321323",
+                "url": "https://api.github.com/repos/pdenis/scrutinizer-client/zipball/6c01cb571e3dd8a6d2aae466c395ca59908667ae",
+                "reference": "6c01cb571e3dd8a6d2aae466c395ca59908667ae",
                 "shasum": ""
             },
             "require": {
@@ -1014,27 +961,26 @@
                 "scrutinizer",
                 "snide"
             ],
-            "time": "2014-01-02 15:56:56"
+            "time": "2014-02-06 21:13:04"
         },
         {
             "name": "snide/travinizer-bundle",
-            "version": "1.1.0",
+            "version": "dev-master",
             "target-dir": "Snide/Bundle/TravinizerBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pdenis/TravinizerBundle.git",
-                "reference": "c97660682c05bc5543b067f03f3e03af46d8974d"
+                "url": "https://github.com/pdenis/SnideTravinizerBundle.git",
+                "reference": "999d7f5d704918839de4b3bbe1fb6c22941d47a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdenis/TravinizerBundle/zipball/c97660682c05bc5543b067f03f3e03af46d8974d",
-                "reference": "c97660682c05bc5543b067f03f3e03af46d8974d",
+                "url": "https://api.github.com/repos/pdenis/SnideTravinizerBundle/zipball/999d7f5d704918839de4b3bbe1fb6c22941d47a8",
+                "reference": "999d7f5d704918839de4b3bbe1fb6c22941d47a8",
                 "shasum": ""
             },
             "require": {
                 "l3l0/php-travis-client": "dev-master",
                 "php": ">=5.3.3",
-                "snide/monitoring": "dev-master",
                 "snide/php-scrutinizer-client": "1.1.*",
                 "symfony/framework-bundle": "~2.3",
                 "twig/twig": "1.*"
@@ -1066,7 +1012,7 @@
                 "symfony",
                 "travis"
             ],
-            "time": "2014-01-02 21:35:52"
+            "time": "2014-02-08 20:56:48"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1288,17 +1234,17 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.4",
+            "version": "v2.3.5",
             "target-dir": "Symfony/Bundle/SwiftmailerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "f5e5d12629c26a835c7aa1d74e2e041486b92d93"
+                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/f5e5d12629c26a835c7aa1d74e2e041486b92d93",
-                "reference": "f5e5d12629c26a835c7aa1d74e2e041486b92d93",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
+                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
                 "shasum": ""
             },
             "require": {
@@ -1339,20 +1285,20 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2013-08-22 13:32:58"
+            "time": "2013-11-21 12:29:01"
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.8",
+            "version": "v2.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b0b421908d569e5024372ded65857707c409e0f7"
+                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b0b421908d569e5024372ded65857707c409e0f7",
-                "reference": "b0b421908d569e5024372ded65857707c409e0f7",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
+                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
                 "shasum": ""
             },
             "require": {
@@ -1435,7 +1381,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -1447,7 +1395,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-12-16 14:36:05"
+            "time": "2014-01-05 01:24:54"
         },
         {
             "name": "twig/extensions",
@@ -1555,7 +1503,9 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "l3l0/php-travis-client": 20,
-        "snide/monitoring": 20
+        "snide/travinizer-bundle": 20,
+        "jns/xhprof-bundle": 20,
+        "facebook/xhprof": 20
     },
     "platform": {
         "php": ">=5.3.3"

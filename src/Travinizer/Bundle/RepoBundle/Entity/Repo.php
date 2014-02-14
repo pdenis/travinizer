@@ -11,7 +11,7 @@ use Travinizer\Bundle\UserBundle\Entity\User;
  *
  * @author Pascal DENIS <pascal.denis@businessdecision.com>
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Snide\Bundle\TravinizerBundle\Repository\Doctrine\Orm\RepoRepository")
  * @ORM\Table(name="travinizer_repo")
  */
 class Repo extends BaseRepo
@@ -22,5 +22,15 @@ class Repo extends BaseRepo
      * @ORM\ManyToOne(targetEntity="Travinizer\Bundle\UserBundle\Entity\User")
      */
     protected $owner;
+
+    public function getOwner()
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(User $owner)
+    {
+        $this->owner = $owner;
+    }
 
 }

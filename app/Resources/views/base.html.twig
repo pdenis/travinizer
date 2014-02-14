@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block stylesheets %}
         {% stylesheets '../app/Resources/public/css/*' %}
-        <link rel="stylesheet" type="text/css" charset="UTF-8" media="all" href="{{ asset_url }}"/>
+        <link rel="stylesheet" type="text/css" charset="UTF-8" media="screen" href="{{ asset_url }}"/>
         {% endstylesheets %}
     {% endblock %}
 </head>
@@ -20,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="{{ path('snide_travinizer_dashboard') }}">Travinizer </a><div class="subtitle">Keep an eye on your repositories</div>
+                <a class="brand" href="{{ path('travinizer_dashboard') }}">Travinizer </a><div class="subtitle">Keep an eye on your repositories</div>
 
                 <div class="nav-collapse collapse">
                     <ul class="nav">
@@ -30,6 +30,8 @@
                 <!--/.nav-collapse -->
                 {% if app.user %}
                     <div class="user pull-right">Welcome {{ app.user.username }} | <a href="{{ path("fos_user_security_logout") }}" title="logout">Logout</a></div>
+                {% else %}
+                    <div class="user pull-right"><a href="{{ path("fos_user_registration_register") }}" title="create an account">Create an account</a> | <a href="{{ path("fos_user_security_login") }}" title="logout">Sign in</a></div>
                 {% endif %}
             </div>
         </div>
@@ -43,7 +45,7 @@
 
     </div>
 </div>
-{% block javascripts %}
+{% block javascript %}
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     {% javascripts '../app/Resources/public/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>

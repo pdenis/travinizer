@@ -19,8 +19,11 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "snide/travinizer-bundle": "1.1.*",
-        "friendsofsymfony/user-bundle": "~1.3"
+        "l3l0/php-travis-client": "dev-master",
+        "snide/travinizer-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "~1.3",
+        "jns/xhprof-bundle": "1.0.*@dev",
+        "facebook/xhprof": "dev-master@dev"
     },
     "scripts": {
         "post-install-cmd": [

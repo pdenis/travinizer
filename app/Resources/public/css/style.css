@@ -127,7 +127,11 @@ td {
     padding-top: 20px !important;
 }
 .span12 {
-    width: 1140px;
+    width: 1000px;
+}
+
+.container {
+    width:1020px !important;
 }
 
 .table th, .table td {
@@ -146,19 +150,14 @@ label {
     float: left;
     padding-top: 5px;
     width: 160px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     margin-top: 0;
 }
 
 label {
     display: inline-block;
 }
-form div div {
-    height: 60px;
-    display:block;
-    margin:20px;
-    clear:both;
-}
+
 input, select {
     background-color: #FFFFFF;
     border: 1px solid #888888;
@@ -171,7 +170,6 @@ input, select {
     float: left;
     position: relative;
     width: 315px;
-
 }
 
 select {
@@ -181,6 +179,37 @@ select {
 
 .submit-btn {
     background-color: #618FB0;
+}
+
+.btn-sub {
+    border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+    box-shadow: none;
+    color: #FFFFFF;
+    text-shadow: none;
+    transition: background-color 0.2s ease 0s;
+    border-radius: 1px 1px 1px 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 4px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #618FB0;
+    border:none;
+
+
+}
+
+.btn-sub:hover, .btn-sub:focus {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08) inset;
+    color: #FFFFFF;
+    background-color: #4D7A9B;
+    border-color: #3E627C;
+    border:none;
 }
 
 .btn-sub {
@@ -239,4 +268,9 @@ select {
     padding: 5px 25px;
 
     background-color: rgba(51, 51, 51, 0.25);
+}
+
+.span12 .span4 {
+    margin-left: 17px;
+    margin-right: 15px;
 }
