@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "85c7822a798732b0c5cdc19c8dfe0c29",
+    "hash": "cb90d35c7f403c209f0aa9996135a577",
     "packages": [
         {
             "name": "doctrine/common",
@@ -259,42 +259,6 @@
             "time": "2012-07-29 11:22:34"
         },
         {
-            "name": "facebook/xhprof",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/facebook/xhprof.git",
-                "reference": "ec8b884ffdae5dfa5e1e271ab6762115123989c5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/facebook/xhprof/zipball/ec8b884ffdae5dfa5e1e271ab6762115123989c5",
-                "reference": "ec8b884ffdae5dfa5e1e271ab6762115123989c5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "xhprof_lib/utils/xhprof_lib.php",
-                    "xhprof_lib/utils/xhprof_runs.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "XHProf: A Hierarchical Profiler for PHP",
-            "homepage": "http://pecl.php.net/package/xhprof",
-            "keywords": [
-                "performance",
-                "profiling"
-            ],
-            "time": "2013-08-09 16:22:45"
-        },
-        {
             "name": "friendsofsymfony/user-bundle",
             "version": "v1.3.3",
             "target-dir": "FOS/UserBundle",
@@ -463,56 +427,6 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
-        },
-        {
-            "name": "jns/xhprof-bundle",
-            "version": "dev-master",
-            "target-dir": "Jns/Bundle/XhprofBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jonaswouters/XhprofBundle.git",
-                "reference": "96df7fbc3c9265e021319f900ea5de6b7dc6ab69"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jonaswouters/XhprofBundle/zipball/96df7fbc3c9265e021319f900ea5de6b7dc6ab69",
-                "reference": "96df7fbc3c9265e021319f900ea5de6b7dc6ab69",
-                "shasum": ""
-            },
-            "require": {
-                "facebook/xhprof": "*",
-                "php": ">=5.3.2",
-                "symfony/dependency-injection": "2.*",
-                "symfony/http-kernel": "2.*"
-            },
-            "suggest": {
-                "doctrine/orm": "Persist details in a storage via doctrine",
-                "ext-xhprof": "Hierarchical Profiler for PHP"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Jns\\Bundle\\XhprofBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Jonas Wouters",
-                    "email": "hello@jonaswouters.be"
-                }
-            ],
-            "description": "Symfony JnsXhprofBundle",
-            "homepage": "https://github.com/jonaswouters/XhprofBundle",
-            "keywords": [
-                "xhprof"
-            ],
-            "time": "2014-02-06 14:04:51"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -824,27 +738,35 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v2.3.4",
+            "version": "dev-master",
             "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "cce05719041d952bbec856789ca18646a1891d03"
+                "reference": "c3e20b4a1bffce8d3885b35227c28e3881f86aed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/cce05719041d952bbec856789ca18646a1891d03",
-                "reference": "cce05719041d952bbec856789ca18646a1891d03",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/c3e20b4a1bffce8d3885b35227c28e3881f86aed",
+                "reference": "c3e20b4a1bffce8d3885b35227c28e3881f86aed",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.2",
-                "symfony/framework-bundle": "~2.2"
+                "symfony/framework-bundle": "~2.4"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.4",
+                "symfony/security-bundle": "~2.4"
+            },
+            "suggest": {
+                "symfony/expression-language": "",
+                "symfony/security-bundle": ""
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -859,7 +781,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "This bundle provides a way to configure your controllers with annotations",
@@ -867,7 +791,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2013-07-24 08:49:53"
+            "time": "2014-01-26 07:48:01"
         },
         {
             "name": "sensio/generator-bundle",
@@ -970,12 +894,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdenis/SnideTravinizerBundle.git",
-                "reference": "999d7f5d704918839de4b3bbe1fb6c22941d47a8"
+                "reference": "8188d033a35c7d2d2902d14e36ac6335021ee640"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdenis/SnideTravinizerBundle/zipball/999d7f5d704918839de4b3bbe1fb6c22941d47a8",
-                "reference": "999d7f5d704918839de4b3bbe1fb6c22941d47a8",
+                "url": "https://api.github.com/repos/pdenis/SnideTravinizerBundle/zipball/8188d033a35c7d2d2902d14e36ac6335021ee640",
+                "reference": "8188d033a35c7d2d2902d14e36ac6335021ee640",
                 "shasum": ""
             },
             "require": {
@@ -1012,7 +936,7 @@
                 "symfony",
                 "travis"
             ],
-            "time": "2014-02-08 20:56:48"
+            "time": "2014-02-17 12:03:39"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1289,16 +1213,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.9",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74"
+                "reference": "b70633f92ff71ef490af4c17e7ca3f3bf3d0f304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
-                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b70633f92ff71ef490af4c17e7ca3f3bf3d0f304",
+                "reference": "b70633f92ff71ef490af4c17e7ca3f3bf3d0f304",
                 "shasum": ""
             },
             "require": {
@@ -1319,6 +1243,7 @@
                 "symfony/doctrine-bridge": "self.version",
                 "symfony/dom-crawler": "self.version",
                 "symfony/event-dispatcher": "self.version",
+                "symfony/expression-language": "self.version",
                 "symfony/filesystem": "self.version",
                 "symfony/finder": "self.version",
                 "symfony/form": "self.version",
@@ -1335,7 +1260,11 @@
                 "symfony/proxy-manager-bridge": "self.version",
                 "symfony/routing": "self.version",
                 "symfony/security": "self.version",
+                "symfony/security-acl": "self.version",
                 "symfony/security-bundle": "self.version",
+                "symfony/security-core": "self.version",
+                "symfony/security-csrf": "self.version",
+                "symfony/security-http": "self.version",
                 "symfony/serializer": "self.version",
                 "symfony/stopwatch": "self.version",
                 "symfony/swiftmailer-bridge": "self.version",
@@ -1353,13 +1282,13 @@
                 "doctrine/orm": "~2.2,>=2.2.3",
                 "ircmaxell/password-compat": "1.0.*",
                 "monolog/monolog": "~1.3",
-                "ocramius/proxy-manager": ">=0.3.1,<0.4-dev",
+                "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
                 "propel/propel1": "1.6.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -1395,7 +1324,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-01-05 01:24:54"
+            "time": "2014-02-12 19:27:03"
         },
         {
             "name": "twig/extensions",
@@ -1446,16 +1375,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.15.0",
+            "version": "v1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "85e4ff98000157ff753d934b9f13659a953f5666"
+                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/85e4ff98000157ff753d934b9f13659a953f5666",
-                "reference": "85e4ff98000157ff753d934b9f13659a953f5666",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
+                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
                 "shasum": ""
             },
             "require": {
@@ -1479,11 +1408,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
-                    "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com"
+                    "name": "Armin Ronacher2",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://github.com/fabpot/Twig/graphs/contributors",
+                    "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -1491,17 +1428,470 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-12-06 07:47:10"
+            "time": "2014-02-13 10:19:29"
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "facebook/xhprof",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facebook/xhprof.git",
+                "reference": "ec8b884ffdae5dfa5e1e271ab6762115123989c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facebook/xhprof/zipball/ec8b884ffdae5dfa5e1e271ab6762115123989c5",
+                "reference": "ec8b884ffdae5dfa5e1e271ab6762115123989c5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "xhprof_lib/utils/xhprof_lib.php",
+                    "xhprof_lib/utils/xhprof_runs.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "XHProf: A Hierarchical Profiler for PHP",
+            "homepage": "http://pecl.php.net/package/xhprof",
+            "keywords": [
+                "performance",
+                "profiling"
+            ],
+            "time": "2013-08-09 16:22:45"
+        },
+        {
+            "name": "jns/xhprof-bundle",
+            "version": "dev-master",
+            "target-dir": "Jns/Bundle/XhprofBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonaswouters/XhprofBundle.git",
+                "reference": "a30dd842fa60b6a7f383fca7ee7a23a6ad6c74c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonaswouters/XhprofBundle/zipball/a30dd842fa60b6a7f383fca7ee7a23a6ad6c74c6",
+                "reference": "a30dd842fa60b6a7f383fca7ee7a23a6ad6c74c6",
+                "shasum": ""
+            },
+            "require": {
+                "facebook/xhprof": "*",
+                "php": ">=5.3.2",
+                "symfony/dependency-injection": "2.*",
+                "symfony/http-kernel": "2.*"
+            },
+            "suggest": {
+                "doctrine/orm": "Persist details in a storage via doctrine",
+                "ext-xhprof": "Hierarchical Profiler for PHP"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Jns\\Bundle\\XhprofBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Jonas Wouters",
+                    "email": "hello@jonaswouters.be"
+                }
+            ],
+            "description": "Symfony JnsXhprofBundle",
+            "homepage": "https://github.com/jonaswouters/XhprofBundle",
+            "keywords": [
+                "xhprof"
+            ],
+            "time": "2014-02-18 09:02:35"
+        },
+        {
+            "name": "phpunit/php-code-coverage",
+            "version": "1.2.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "6ba4ed2895d538a039d5d5866edc4ec0424c7852"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6ba4ed2895d538a039d5d5866edc4ec0424c7852",
+                "reference": "6ba4ed2895d538a039d5d5866edc4ec0424c7852",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-file-iterator": ">=1.3.0@stable",
+                "phpunit/php-text-template": ">=1.2.0@stable",
+                "phpunit/php-token-stream": ">=1.1.3@stable"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*@dev"
+            },
+            "suggest": {
+                "ext-dom": "*",
+                "ext-xdebug": ">=2.0.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
+            "homepage": "https://github.com/sebastianbergmann/php-code-coverage",
+            "keywords": [
+                "coverage",
+                "testing",
+                "xunit"
+            ],
+            "time": "2014-02-03 07:44:47"
+        },
+        {
+            "name": "phpunit/php-file-iterator",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
+                "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/acd690379117b042d1c8af1fafd61bde001bf6bb",
+                "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "File/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+            "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
+            "keywords": [
+                "filesystem",
+                "iterator"
+            ],
+            "time": "2013-10-10 15:34:57"
+        },
+        {
+            "name": "phpunit/php-text-template",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-text-template.git",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Text/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Simple template engine.",
+            "homepage": "https://github.com/sebastianbergmann/php-text-template/",
+            "keywords": [
+                "template"
+            ],
+            "time": "2014-01-30 17:20:04"
+        },
+        {
+            "name": "phpunit/php-timer",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-timer.git",
+                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
+                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Utility class for timing",
+            "homepage": "https://github.com/sebastianbergmann/php-timer/",
+            "keywords": [
+                "timer"
+            ],
+            "time": "2013-08-02 07:42:54"
+        },
+        {
+            "name": "phpunit/php-token-stream",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-token-stream.git",
+                "reference": "5220af2a7929aa35cf663d97c89ad3d50cf5fa3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/5220af2a7929aa35cf663d97c89ad3d50cf5fa3e",
+                "reference": "5220af2a7929aa35cf663d97c89ad3d50cf5fa3e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Wrapper around PHP's tokenizer extension.",
+            "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
+            "keywords": [
+                "tokenizer"
+            ],
+            "time": "2013-09-13 04:58:23"
+        },
+        {
+            "name": "phpunit/phpunit",
+            "version": "3.7.31",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "d24e9877331039582497052cc3c4d9f465b88210"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d24e9877331039582497052cc3c4d9f465b88210",
+                "reference": "d24e9877331039582497052cc3c4d9f465b88210",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-pcre": "*",
+                "ext-reflection": "*",
+                "ext-spl": "*",
+                "php": ">=5.3.3",
+                "phpunit/php-code-coverage": "~1.2.1",
+                "phpunit/php-file-iterator": ">=1.3.1",
+                "phpunit/php-text-template": ">=1.1.1",
+                "phpunit/php-timer": ">=1.0.4",
+                "phpunit/phpunit-mock-objects": "~1.2.0",
+                "symfony/yaml": "~2.0"
+            },
+            "require-dev": {
+                "pear-pear/pear": "1.9.4"
+            },
+            "suggest": {
+                "ext-json": "*",
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "phpunit/php-invoker": ">=1.1.0,<1.2.0"
+            },
+            "bin": [
+                "composer/bin/phpunit"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHPUnit/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "",
+                "../../symfony/yaml/"
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "The PHP Unit Testing framework.",
+            "homepage": "http://www.phpunit.de/",
+            "keywords": [
+                "phpunit",
+                "testing",
+                "xunit"
+            ],
+            "time": "2014-02-03 07:46:27"
+        },
+        {
+            "name": "phpunit/phpunit-mock-objects",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
+                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5794e3c5c5ba0fb037b11d8151add2a07fa82875",
+                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-text-template": ">=1.1.1@stable"
+            },
+            "suggest": {
+                "ext-soap": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "PHPUnit/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Mock Object library for PHPUnit",
+            "homepage": "https://github.com/sebastianbergmann/phpunit-mock-objects/",
+            "keywords": [
+                "mock",
+                "xunit"
+            ],
+            "time": "2013-01-13 10:24:48"
+        }
     ],
     "aliases": [
 
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "sensio/framework-extra-bundle": 20,
         "l3l0/php-travis-client": 20,
         "snide/travinizer-bundle": 20,
         "jns/xhprof-bundle": 20,

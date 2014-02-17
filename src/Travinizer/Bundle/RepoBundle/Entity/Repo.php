@@ -23,11 +23,21 @@ class Repo extends BaseRepo
      */
     protected $owner;
 
+    /**
+     * Getter owner
+     *
+     * @return User
+     */
     public function getOwner()
     {
         return $this->owner;
     }
 
+    /**
+     * Setter owner
+     *
+     * @param User $owner
+     */
     public function setOwner(User $owner)
     {
         $this->owner = $owner;

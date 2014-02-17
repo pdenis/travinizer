@@ -23,6 +23,7 @@ class DashController extends Controller
         if($this->getUser()) {
 
             $repositories = $this->getManager()->findAllByUser($this->getUser());
+
             return $this->render(
                 'SnideTravinizerBundle:Dash:index.html.twig',
                 array(

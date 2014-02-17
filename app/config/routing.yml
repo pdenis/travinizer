@@ -19,4 +19,4 @@ fos_user_change_password:
     prefix: /profile
 
 snide_travinizer:
-    resource: "@SnideTravinizerBundle/Resources/config/routing.yml"
+    resource: "@SnideTravinizerBundle/Resources/config/routing/routing.yml"
