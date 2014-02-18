@@ -130,10 +130,6 @@ td {
     width: 1000px;
 }
 
-.container {
-    width:1020px !important;
-}
-
 .table th, .table td {
     border-top:none;
 }
@@ -276,4 +272,25 @@ select {
 
 td.badges {
     width: 335px;
+}
+
+#content {
+    padding:10px;
+}
+
+.row.message {
+    -moz-box-sizing: content-box;
+    background: none repeat !important;
+    border-radius: 1px 1px 1px 1px;
+    color: #F8F8F8;
+    margin-bottom:10px;
+    padding-bottom: 0px;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+form .alert-error ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
 }
