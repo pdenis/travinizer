@@ -8,11 +8,12 @@
         </div>
     {% endif %}
     <div class="row">
-        <div class="login-title">
-            <h2>Sign in</h2>
-        </div>
+        <div id="content">
+            <div class="title">
+                <h2>Sign in</h2>
+            </div>
 
-        <div id="content" class="login">
+
 
             <form action="{{ path("fos_user_security_check") }}" method="post">
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />

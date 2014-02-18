@@ -11,7 +11,6 @@ body{
     color: #F8F8F8;
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
     font-weight: 300;
-    padding-bottom: 100px;
     color: #F8F8F8;
     font-family: "Open Sans",sans-serif;
     font-size: 13px;
@@ -66,18 +65,25 @@ h1, h2, h3 {
     background: none repeat scroll 0 0 rgba(51, 51, 51, 0.4);
     border-radius: 1px 1px 1px 1px;
     color: #F8F8F8;
-    margin-bottom:40px;
-    padding-bottom: 25px;
-    padding-left: 0;
-    padding-top: 10px;
-}
-.span4 {
-    margin-left: 10px;
+    padding: 15px;
 }
 
-.issues {
-    padding-top: 20px;
+.row h3 {
+    margin-left:5px;
 }
+.row.row-nav {
+    -moz-box-sizing: content-box;
+    background: none repeat !important;
+    color: #F8F8F8;
+    margin-bottom:0px;
+    padding:0px;
+    height:55px;
+}
+.span4 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .no-margin {
     margin:0;
 }
@@ -126,9 +132,6 @@ td {
     height: 35px;
     padding-top: 20px !important;
 }
-.span12 {
-    width: 1000px;
-}
 
 .table th, .table td {
     border-top:none;
@@ -154,6 +157,13 @@ label {
     display: inline-block;
 }
 
+form div div {
+    clear: both;
+}
+
+.form-group {
+    clear:none !important;
+}
 input, select {
     background-color: #FFFFFF;
     border: 1px solid #888888;
@@ -247,35 +257,59 @@ select {
 
 .subtitle {
     font-style:italic;
-    padding: 10px 0px;
+    padding: 17px 0px;
     float:left;
 }
 
 .user {
-    padding: 10px 0px;
+    display: block;
+    font-weight: bold;
+    height: 25px;
+    padding: 15px 0;
 }
 
 #content.login {
     padding: 30px;
 }
 
-.login-title {
-    margin-top: -10px;
+.title {
+
     padding: 5px 25px;
     background-color: rgba(51, 51, 51, 0.25);
+    margin-bottom: 20px;
 }
 
+.title {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -15px;
+}
 .span12 .span4 {
     margin-left: 17px;
     margin-right: 15px;
 }
 
+.navbar .brand {
+    padding-top:15px;
+}
 td.badges {
     width: 335px;
 }
+.user-dropdown {
+    background-color: #A8A8A8;
+    border-radius: 15px 15px 15px 15px;
+    margin-right: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+}
 
-#content {
-    padding:10px;
+.user-dropdown .dropdown-menu {
+    background-color: #A8A8A8;
+}
+.user-dropdown a {
+    color: black;
+    font-weight:bold;
 }
 
 .row.message {
@@ -294,3 +328,4 @@ form .alert-error ul {
     margin: 0;
     padding: 0;
 }
+

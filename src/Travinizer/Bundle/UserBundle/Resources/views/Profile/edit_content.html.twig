@@ -2,7 +2,9 @@
 
 <div class="row">
     <div id="content" class="span11">
-        <h2>My profile</h2>
+        <div class="title">
+            <h2>My profile</h2>
+        </div>
         <form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
             {{ form_widget(form) }}
             <div class="form-actions">

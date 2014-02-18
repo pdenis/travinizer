@@ -12,32 +12,51 @@
 
 <body class="background">
 <div class="wrap">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a class="brand" href="{{ path('snide_travinizer_dashboard') }}">Travinizer </a><div class="subtitle">Keep an eye on your repositories</div>
 
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
-                {% if app.user %}
-                    <div class="user pull-right">Welcome {{ app.user.username }} | <a href="{{ path("fos_user_security_logout") }}" title="logout">Logout</a></div>
-                {% else %}
-                    <div class="user pull-right"><a href="{{ path("fos_user_registration_register") }}" title="create an account">Create an account</a> | <a href="{{ path("fos_user_security_login") }}" title="logout">Sign in</a></div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
     <div class="content container">
         {% include "SnideTravinizerBundle:Common:message.html.twig" %}
+
+        <div class="row row-nav">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="{{ path('snide_travinizer_dashboard') }}">Travinizer </a><div class="subtitle">Keep an eye on your repositories</div>
+
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                        {% if app.user %}
+                            <div class="user pull-right">
+                                <ul class="dropdown pull-left user-dropdown">
+
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Welcome {{ app.user.username }}
+                                        <b class="caret"></b>
+                                    </a>
+
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li>
+                                            <a tabindex="-1" href="{{ path('snide_travinizer_repo_new') }}">Add a repository</a>
+                                            <a tabindex="-1" href="{{ path('fos_user_profile_edit') }}">Account</a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                                | <a href="{{ path("fos_user_security_logout") }}" title="logout">Logout</a></div>
+                        {% else %}
+                            <div class="user pull-right"><a href="{{ path("fos_user_registration_register") }}" title="create an account">Create an account</a> | <a href="{{ path("fos_user_security_login") }}" title="logout">Sign in</a></div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% block main %}
 
