@@ -11,6 +11,11 @@
 </head>
 
 <body class="background">
+
+<div class="forkme pull-right">
+    <a target="blank" href="https://github.com/pdenis/travinizer" title="Fork me on github"><img width="270" src='/images/fork.gif' alt="Fork me on github"/></a>
+</div>
+
 <div class="wrap">
 
     <div class="content container">
@@ -51,7 +56,7 @@
                                 </ul>
                                 | <a href="{{ path("fos_user_security_logout") }}" title="logout">Logout</a></div>
                         {% else %}
-                            <div class="user pull-right"><a href="{{ path("fos_user_registration_register") }}" title="create an account">Create an account</a> | <a href="{{ path("fos_user_security_login") }}" title="logout">Sign in</a></div>
+                            <div class="user pull-right"><a href="{{ path("fos_user_registration_register") }}" title="Sign up">Sign up</a> | <a href="{{ path("fos_user_security_login") }}" title="Sign in">Sign in</a></div>
                         {% endif %}
                     </div>
                 </div>
@@ -61,7 +66,9 @@
         {% block main %}
 
         {% endblock %}
-
+        <div id="footer" class="row row-footer">
+            <div class="copyright">2014 © travinizer. All Rights Reserved</div>
+        </div>
     </div>
 </div>
 {% block javascript %}

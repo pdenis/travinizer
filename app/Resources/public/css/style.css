@@ -9,7 +9,7 @@ html, body {
 body{
     background: radial-gradient(ellipse farthest-side at top, rgba(74, 121, 147, 0.89), rgba(204, 204, 204, 0.85) 60%, rgba(185, 135, 131, 0.87) 120%) repeat scroll 0 0%, url("../images/dark.png") repeat scroll 0 0 transparent;
     color: #F8F8F8;
-    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    padding-top: 30px; /* 60px to make the container go all the way to the bottom of the topbar */
     font-weight: 300;
     color: #F8F8F8;
     font-family: "Open Sans",sans-serif;
@@ -65,11 +65,18 @@ h1, h2, h3 {
     background: none repeat scroll 0 0 rgba(51, 51, 51, 0.4);
     border-radius: 1px 1px 1px 1px;
     color: #F8F8F8;
+    width:1000px;
     padding: 15px;
 }
 
 .row h3 {
     margin-left:5px;
+}
+
+.forkme {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .row.row-nav {
     -moz-box-sizing: content-box;
@@ -77,7 +84,28 @@ h1, h2, h3 {
     color: #F8F8F8;
     margin-bottom:0px;
     padding:0px;
+    width:1030px;
     height:55px;
+}
+
+.row.row-footer {
+    -moz-box-sizing: content-box;
+    background: none repeat scroll 0 0 rgba(51, 51, 51, 0.05) !important;
+    color: #F8F8F8;
+    margin-bottom:0px;
+    padding:0px;
+    width:1030px;
+    height:55px;
+    padding-top: 20px;
+}
+
+.copyright {
+    padding:auto;
+    margin:auto;
+    width:100%;
+    text-align:center;
+
+
 }
 .span4 {
     margin-left: 5px;
@@ -263,7 +291,7 @@ select {
 
 .user {
     display: block;
-    font-weight: bold;
+    font-weight: 600;
     height: 25px;
     padding: 15px 0;
 }
@@ -296,7 +324,7 @@ td.badges {
     width: 335px;
 }
 .user-dropdown {
-    background-color: #A8A8A8;
+    background-color: #4D7A9B;
     border-radius: 15px 15px 15px 15px;
     margin-right: 4px;
     padding-left: 10px;
@@ -305,11 +333,12 @@ td.badges {
 }
 
 .user-dropdown .dropdown-menu {
-    background-color: #A8A8A8;
+    background-color: #4D7A9B;
 }
 .user-dropdown a {
     color: black;
-    font-weight:bold;
+    font-family: "Open Sans",sans-serif;
+    font-weight: lighter;
 }
 
 .row.message {
