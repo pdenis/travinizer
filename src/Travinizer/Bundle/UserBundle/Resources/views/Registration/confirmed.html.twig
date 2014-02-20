@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block main %}
+    <div class="row">
+        <div id="content">
+            <div class="title">
+                <h2>Congratulations</h2>
+            </div>
+            <p>{{ 'registration.confirmed'|trans({'%username%': user.username}, 'FOSUserBundle') }}</p>
+            <p>Now, you can add a repository, to start <a href="{{ path('snide_travinizer_repo_new') }}">click here</a></p>
+        </div>
+    </div>
+{% endblock main %}
+

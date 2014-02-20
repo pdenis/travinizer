@@ -1,12 +1,15 @@
 {% extends "::base.html.twig" %}
 
-{% block main %}
+{% block message %}
     {% if error %}
         <div class="alert alert-error">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             {{ error|trans }}
         </div>
     {% endif %}
+{% endblock message %}
+{% block main %}
+
     <div class="row">
         <div id="content">
             <div class="title">

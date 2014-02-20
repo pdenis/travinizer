@@ -19,8 +19,9 @@
 <div class="wrap">
 
     <div class="content container">
-        {% include "SnideTravinizerBundle:Common:message.html.twig" %}
-
+        {% block message %}
+            {% include "SnideTravinizerBundle:Common:message.html.twig" %}
+        {% endblock message %}
         <div class="row row-nav">
             <div class="navbar navbar-inverse">
                 <div class="navbar-inner">

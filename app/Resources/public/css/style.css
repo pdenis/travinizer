@@ -108,10 +108,23 @@ h1, h2, h3 {
 
 }
 .span4 {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 15px;
+    margin-right: 18px;
+
 }
 
+.metrics {
+    float: left;
+    margin-bottom: 60px;
+    position: relative;
+}
+h3 {
+    background: none repeat scroll 0 0 rgba(51, 51, 51, 0.05) !important;
+    margin-left: -10px !important;
+    margin-top: 40px;
+    padding: 10px;
+    width: 1005px;
+}
 .no-margin {
     margin:0;
 }
@@ -298,6 +311,14 @@ select {
 
 #content.login {
     padding: 30px;
+}
+
+#content {
+    min-height:500px;
+}
+
+h3 {
+    clear:both;
 }
 
 .title {
