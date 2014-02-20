@@ -3,8 +3,10 @@
 
 namespace Travinizer\Bundle\UserBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Entity\User as BaseUser;
+use Travinizer\Bundle\RepoBundle\Entity\Repo;
 
 /**
  * Class User

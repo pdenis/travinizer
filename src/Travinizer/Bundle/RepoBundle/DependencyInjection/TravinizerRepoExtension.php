@@ -26,5 +26,6 @@ class TravinizerRepoExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('manager.xml');
+        $loader->load('voter.xml');
     }
 }
