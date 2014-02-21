@@ -36,6 +36,11 @@ a.underline {
     display: table;
 }
 
+.error {
+    font-weight: 800;
+    line-height: 20;
+    text-align: center;
+}
 .clear {
     clear: both;
 }
