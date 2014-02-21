@@ -22,7 +22,7 @@ class RepoVoter implements VoterInterface
 
     /**
      * Constructor
-     * 
+     *
      * @param string $class
      */
     public function __construct($class)
@@ -71,7 +71,7 @@ class RepoVoter implements VoterInterface
             if ($this->supportsAttribute($attribute) && $this->supportsClass($object)) {
                 $user = $token->getUser();
 
-                if ($user->getId() == $object->getOwner()->getId()) {
+                if (is_object($user) && $user->getId() == $object->getOwner()->getId()) {
                     return VoterInterface::ACCESS_GRANTED;
                 }
             }
