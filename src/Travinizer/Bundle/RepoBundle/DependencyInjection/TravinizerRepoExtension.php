@@ -25,7 +25,9 @@ class TravinizerRepoExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader->load('doctrine/orm.xml');
         $loader->load('manager.xml');
         $loader->load('voter.xml');
+        $loader->load('form.xml');
     }
 }

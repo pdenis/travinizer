@@ -19,7 +19,8 @@ class AppKernel extends Kernel
             new Snide\Bundle\TravinizerBundle\SnideTravinizerBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Travinizer\Bundle\UserBundle\TravinizerUserBundle(),
-            new Travinizer\Bundle\RepoBundle\TravinizerRepoBundle()
+            new Travinizer\Bundle\RepoBundle\TravinizerRepoBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -28,7 +29,8 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Jns\Bundle\XhprofBundle\JnsXhprofBundle();
-
+            $bundles[] = new Mattsches\VersionEyeBundle\MattschesVersionEyeBundle();
+            $bundles[] = new Snide\Bundle\ScrutinizerBundle\SnideScrutinizerBundle();
         }
 
         return $bundles;

@@ -78,5 +78,10 @@ snide_travinizer:
         class: Travinizer\Bundle\RepoBundle\Manager\RepoManager
     repository:
         type: doctrine_orm
+        class: Travinizer\Bundle\RepoBundle\Repository\Doctrine\Orm\RepoRepository
         repo:
             class: Travinizer\Bundle\RepoBundle\Entity\Repo
+
+genemu_form:
+    select2: ~
+

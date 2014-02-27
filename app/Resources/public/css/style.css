@@ -36,6 +36,9 @@ a.underline {
     display: table;
 }
 
+.select2-container {
+    width: 300px;
+}
 .error {
     font-weight: 800;
     line-height: 20;
@@ -376,6 +379,7 @@ td.badges {
     padding-bottom: 0px;
     padding-left: 0;
     padding-top: 10px;
+    width: 1030px;
 }
 
 form .alert-error ul {

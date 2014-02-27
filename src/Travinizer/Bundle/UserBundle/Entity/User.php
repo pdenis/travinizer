@@ -29,7 +29,8 @@ class User extends BaseUser
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="User", mappedBy="owner", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="User", mappedBy="users", cascade={"persist"})
+     * @ORM\JoinTable(name="users_repos")
      */
     protected $repos;
 

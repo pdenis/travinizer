@@ -20,3 +20,6 @@ fos_user_change_password:
 
 snide_travinizer:
     resource: "@SnideTravinizerBundle/Resources/config/routing/routing.yml"
+
+travinizer_repo:
+    resource: "@TravinizerRepoBundle/Resources/config/routing/repo.yml"

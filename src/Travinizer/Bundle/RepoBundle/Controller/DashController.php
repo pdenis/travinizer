@@ -3,7 +3,7 @@
 
 namespace Travinizer\Bundle\RepoBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Snide\Bundle\TravinizerBundle\Controller\DashController as BaseController;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * @author Pascal DENIS <pascal.denis@businessdecision.com>
  */
-class DashController extends Controller
+class DashController extends BaseController
 {
     /**
      * Dashboard Action
@@ -39,13 +39,5 @@ class DashController extends Controller
 
     }
 
-    /**
-     * Get Repo manager
-     *
-     * @return mixed
-     */
-    protected function getManager()
-    {
-        return $this->get('snide_travinizer.repo_manager');
-    }
+
 }

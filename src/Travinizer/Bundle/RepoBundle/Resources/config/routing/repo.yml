@@ -1,0 +1,12 @@
+travinizer_repo_update_user:
+    pattern:   /{slug}/update/users
+    defaults:  { _controller: TravinizerRepoBundle:Repo:updateUser }
+    requirements:
+        _method:  POST
+        slug: "[a-zA-Z0-9-_/]+"
+
+travinizer_repo_edit_user:
+    pattern:   /{slug}/edit/users
+    defaults:  { _controller: TravinizerRepoBundle:Repo:editUser }
+    requirements:
+        slug: "[a-zA-Z0-9-_/]+"

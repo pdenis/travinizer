@@ -71,7 +71,7 @@ class RepoVoter implements VoterInterface
             if ($this->supportsAttribute($attribute) && $this->supportsClass($object)) {
                 $user = $token->getUser();
 
-                if (is_object($user) && $user->getId() == $object->getOwner()->getId()) {
+                if (is_object($user) && $object->getUsers()->contains($user)) {
                     return VoterInterface::ACCESS_GRANTED;
                 }
             }

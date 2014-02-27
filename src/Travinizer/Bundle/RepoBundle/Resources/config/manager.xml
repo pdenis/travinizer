@@ -6,7 +6,7 @@
 
     <services>
         <service id="snide_travinizer.repo_manager" class="%snide_travinizer.repo_manager.class%" public="true">
-            <argument type="service" id="snide_travinizer.repo_repository"/>
+            <argument type="service" id="travinizer_repo.repo_repository"/>
             <argument>%snide_travinizer.model.repo.class%</argument>
             <argument type="service" id="snide_travinizer.travis_loader"/>
             <argument type="service" id="snide_travinizer.scrutinizer_loader"/>

@@ -10,6 +10,7 @@ use Snide\Bundle\TravinizerBundle\Reader\ComposerReaderInterface;
 use Snide\Bundle\TravinizerBundle\Repository\RepoRepositoryInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Core\SecurityContextInterface;
+use Travinizer\Bundle\RepoBundle\Repository\Doctrine\Orm\RepoRepository;
 use Travinizer\Bundle\UserBundle\Entity\User;
 
 
@@ -30,7 +31,7 @@ class RepoManager extends BaseRepoManager
     /**
      * Constructor
      *
-     * @param RepoRepositoryInterface $repository Repo repository
+     * @param RepoRepository $repository Repo repository
      * @param $class
      * @param \Snide\Bundle\TravinizerBundle\Loader\TravisLoaderInterface $travisLoader
      * @param \Snide\Bundle\TravinizerBundle\Loader\ScrutinizerLoaderInterface $scrutinizerLoader
@@ -38,7 +39,7 @@ class RepoManager extends BaseRepoManager
      * @param \Symfony\Component\Security\Core\SecurityContextInterface $securityContext
      */
     public function __construct(
-        RepoRepositoryInterface $repository,
+        RepoRepository $repository,
         $class,
         TravisLoaderInterface $travisLoader,
         ScrutinizerLoaderInterface $scrutinizerLoader,
@@ -61,20 +62,14 @@ class RepoManager extends BaseRepoManager
     }
 
     /**
-     * Update an repo
+     * Find all repositories for a user
      *
-     * @param Repo $repo
+     * @param User $user
+     * @return array
      */
-    public function update(Repo $repo)
-    {
-        $this->updateUser($repo);
-        parent::update($repo);
-    }
-
-
     public function findAllByUser(User $user)
     {
-        $repositories = $this->repository->findBy(array('owner' => $user));
+        $repositories = $this->repository->findAllByUser($user);
         $repos = array();
         foreach($repositories as $repo) {
             $this->loadPackagistInfos($repo);
@@ -84,8 +79,13 @@ class RepoManager extends BaseRepoManager
         return $repos;
     }
 
+    /**
+     * Add session user to the list
+     *
+     * @param \Travinizer\Bundle\RepoBundle\Entity\Repo $repo
+     */
     protected function updateUser(\Travinizer\Bundle\RepoBundle\Entity\Repo $repo)
     {
-        $repo->setOwner($this->securityContext->getToken()->getUser());
+        $repo->addUser($this->securityContext->getToken()->getUser());
     }
 }

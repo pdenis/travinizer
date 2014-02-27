@@ -3,34 +3,258 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "cb90d35c7f403c209f0aa9996135a577",
+    "hash": "72f75265129c110336c976a53d4b598b",
     "packages": [
         {
-            "name": "doctrine/common",
-            "version": "2.2.3",
+            "name": "doctrine/annotations",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/common.git",
-                "reference": "9e13facbacb001d324d71a0f6d25d8d7f12346b6"
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/9e13facbacb001d324d71a0f6d25d8d7f12346b6",
-                "reference": "9e13facbacb001d324d71a0f6d25d8d7f12346b6",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/40db0c96985aab2822edbc4848b3bd2429e02670",
+                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Annotations\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "http://jmsyst.com",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2013-06-16 21:33:03"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "e16d7adf45664a50fa86f515b6d5e7f670130449"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/e16d7adf45664a50fa86f515b6d5e7f670130449",
+                "reference": "e16d7adf45664a50fa86f515b6d5e7f670130449",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Cache\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "http://jmsyst.com",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Caching library offering an object-oriented API for many cache backends",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "cache",
+                "caching"
+            ],
+            "time": "2013-10-25 19:04:14"
+        },
+        {
+            "name": "doctrine/collections",
+            "version": "v1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/collections.git",
+                "reference": "b99c5c46c87126201899afe88ec490a25eedd6a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/b99c5c46c87126201899afe88ec490a25eedd6a2",
+                "reference": "b99c5c46c87126201899afe88ec490a25eedd6a2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
-                    "Doctrine\\Common": "lib/"
+                    "Doctrine\\Common\\Collections\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "http://jmsyst.com",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Collections Abstraction library",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "array",
+                "collections",
+                "iterator"
+            ],
+            "time": "2014-02-03 23:07:43"
+        },
+        {
+            "name": "doctrine/common",
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/common.git",
+                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/ceb18cf9b0230f3ea208b6238130fd415abda0a7",
+                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "1.*",
+                "doctrine/cache": "1.*",
+                "doctrine/collections": "1.*",
+                "doctrine/inflector": "1.*",
+                "doctrine/lexer": "1.*",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
             ],
             "authors": [
                 {
@@ -68,27 +292,32 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2012-08-29 08:04:14"
+            "time": "2013-09-07 10:20:34"
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.2.2",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "ee8f64111d03df2dbf3c106214514fce4a9857ab"
+                "reference": "2a37b007dda8e21bdbb8fa445be8fa0064199e13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/ee8f64111d03df2dbf3c106214514fce4a9857ab",
-                "reference": "ee8f64111d03df2dbf3c106214514fce4a9857ab",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2a37b007dda8e21bdbb8fa445be8fa0064199e13",
+                "reference": "2a37b007dda8e21bdbb8fa445be8fa0064199e13",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": ">=2.2.0,<=2.2.99",
+                "doctrine/common": ">=2.3.0,<2.5-dev",
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\DBAL": "lib/"
@@ -96,7 +325,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
@@ -127,7 +356,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2012-04-13 07:56:12"
+            "time": "2013-05-11 07:45:37"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -200,26 +429,154 @@
             "time": "2013-03-25 20:13:59"
         },
         {
-            "name": "doctrine/orm",
-            "version": "2.2.3",
+            "name": "doctrine/inflector",
+            "version": "v1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "a65377a5707cd55df873e16c6b8f1bbc100f97ee"
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/a65377a5707cd55df873e16c6b8f1bbc100f97ee",
-                "reference": "a65377a5707cd55df873e16c6b8f1bbc100f97ee",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
+                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "2.2.*",
-                "doctrine/dbal": "2.2.*",
-                "ext-pdo": "*",
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Inflector\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "http://jmsyst.com",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "inflection",
+                "pluarlize",
+                "singuarlize",
+                "string"
+            ],
+            "time": "2013-01-10 21:49:15"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/2f708a85bb3aab5d99dab8be435abd73e0b18acb",
+                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Lexer\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "http://jmsyst.com",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2013-01-12 18:59:04"
+        },
+        {
+            "name": "doctrine/orm",
+            "version": "2.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/doctrine2.git",
+                "reference": "2c31ec4809a28a549bf22d7cb7504add98156cd6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2c31ec4809a28a549bf22d7cb7504add98156cd6",
+                "reference": "2c31ec4809a28a549bf22d7cb7504add98156cd6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "2.3.*",
+                "ext-pdo": "*",
+                "php": ">=5.3.2",
+                "symfony/console": "2.*"
+            },
+            "suggest": {
+                "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
+            },
+            "bin": [
+                "bin/doctrine",
+                "bin/doctrine.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\ORM": "lib/"
@@ -227,7 +584,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
@@ -256,7 +613,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2012-07-29 11:22:34"
+            "time": "2014-02-08 16:28:24"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -325,6 +682,169 @@
                 "User management"
             ],
             "time": "2013-09-23 08:24:12"
+        },
+        {
+            "name": "genemu/form-bundle",
+            "version": "v2.2.1",
+            "target-dir": "Genemu/Bundle/FormBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/genemu/GenemuFormBundle.git",
+                "reference": "78fcd307a69b499241d7f0fa5c1b378e77358f16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/78fcd307a69b499241d7f0fa5c1b378e77358f16",
+                "reference": "78fcd307a69b499241d7f0fa5c1b378e77358f16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "1.*",
+                "doctrine/mongodb-odm-bundle": "*",
+                "doctrine/orm": "2.*",
+                "phpunit/phpunit": "3.7.*",
+                "propel/propel-bundle": "*",
+                "symfony/doctrine-bridge": "~2.3",
+                "symfony/finder": "2.*"
+            },
+            "suggest": {
+                "symfony/doctrine-bundle": "In order to use some form types with Doctrine",
+                "symfony/finder": "For an image type",
+                "symfony/mongodb-odm-bundle": "For MongoDB integration",
+                "symfony/twig-bridge": "For integration into Twig templates"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Genemu\\Bundle\\FormBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Chauvel",
+                    "email": "olivier@generation-multiple.com"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/genemu/GenemuFormBundle/contributors"
+                },
+                {
+                    "name": "Bilal Amarni",
+                    "email": "bilal.amarni@gmail.com"
+                }
+            ],
+            "description": "Extra form types for your Symfony2 projects",
+            "keywords": [
+                "extra form",
+                "form"
+            ],
+            "time": "2013-07-31 22:28:58"
+        },
+        {
+            "name": "guzzle/guzzle",
+            "version": "v3.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "0f2aad252b9c9120743dd475b383b1b6fb54c2f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0f2aad252b9c9120743dd475b383b1b6fb54c2f3",
+                "reference": "0f2aad252b9c9120743dd475b383b1b6fb54c2f3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.2",
+                "symfony/event-dispatcher": ">=2.1"
+            },
+            "replace": {
+                "guzzle/batch": "self.version",
+                "guzzle/cache": "self.version",
+                "guzzle/common": "self.version",
+                "guzzle/http": "self.version",
+                "guzzle/inflection": "self.version",
+                "guzzle/iterator": "self.version",
+                "guzzle/log": "self.version",
+                "guzzle/parser": "self.version",
+                "guzzle/plugin": "self.version",
+                "guzzle/plugin-async": "self.version",
+                "guzzle/plugin-backoff": "self.version",
+                "guzzle/plugin-cache": "self.version",
+                "guzzle/plugin-cookie": "self.version",
+                "guzzle/plugin-curlauth": "self.version",
+                "guzzle/plugin-error-response": "self.version",
+                "guzzle/plugin-history": "self.version",
+                "guzzle/plugin-log": "self.version",
+                "guzzle/plugin-md5": "self.version",
+                "guzzle/plugin-mock": "self.version",
+                "guzzle/plugin-oauth": "self.version",
+                "guzzle/service": "self.version",
+                "guzzle/stream": "self.version"
+            },
+            "require-dev": {
+                "doctrine/cache": "*",
+                "monolog/monolog": "1.*",
+                "phpunit/phpunit": "3.7.*",
+                "psr/log": "1.0.*",
+                "symfony/class-loader": "*",
+                "zendframework/zend-cache": "2.0.*",
+                "zendframework/zend-log": "2.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle\\Tests": "tests/",
+                    "Guzzle": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Guzzle Community",
+                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2013-06-11 00:24:07"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -541,28 +1061,33 @@
             "time": "2011-11-15 03:49:16"
         },
         {
-            "name": "l3l0/php-travis-client",
-            "version": "dev-master",
+            "name": "mattsches/version-eye-bundle",
+            "version": "0.4.0",
+            "target-dir": "Mattsches/VersionEyeBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/l3l0/php-travis-client.git",
-                "reference": "942634f6e39e504a5d70f6b77db6a0e69f3bf4de"
+                "url": "https://github.com/mattsches/VersionEyeBundle.git",
+                "reference": "910f60896a8847ff4c72e367dc2a1880eb44ecb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/l3l0/php-travis-client/zipball/942634f6e39e504a5d70f6b77db6a0e69f3bf4de",
-                "reference": "942634f6e39e504a5d70f6b77db6a0e69f3bf4de",
+                "url": "https://api.github.com/repos/mattsches/VersionEyeBundle/zipball/910f60896a8847ff4c72e367dc2a1880eb44ecb1",
+                "reference": "910f60896a8847ff4c72e367dc2a1880eb44ecb1",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "2.2.*",
-                "kriswallsmith/buzz": "0.5",
-                "php": ">=5.3.0"
+                "guzzle/cache": "3.*",
+                "guzzle/http": "3.*",
+                "guzzle/plugin": "3.*",
+                "php": ">=5.3.2"
             },
-            "type": "library",
+            "require-dev": {
+                "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
+            },
+            "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
-                    "Travis": "src/"
+                    "Mattsches\\VersionEyeBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -571,19 +1096,19 @@
             ],
             "authors": [
                 {
-                    "name": "Leszek Prabucki",
-                    "email": "leszek.prabucki@gmail.com",
-                    "homepage": "http://l3l0.eu/lang/en"
+                    "name": "Matthias Gutjahr",
+                    "email": "mail@matthias-gutjahr.de",
+                    "homepage": "http://matthias-gutjahr.de/",
+                    "role": "Developer"
                 }
             ],
-            "description": "PHP implementation for travis API",
-            "homepage": "http://github.com/l3l0/php-travis-client",
+            "description": "Symfony MattschesVersionEyeBundle",
             "keywords": [
-                "ci",
-                "test",
-                "travis"
+                "Symfony2",
+                "bundle",
+                "version eye"
             ],
-            "time": "2013-08-09 08:02:26"
+            "time": "2013-03-29 22:40:26"
         },
         {
             "name": "monolog/monolog",
@@ -843,20 +1368,20 @@
         },
         {
             "name": "snide/php-scrutinizer-client",
-            "version": "1.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdenis/scrutinizer-client.git",
-                "reference": "6c01cb571e3dd8a6d2aae466c395ca59908667ae"
+                "reference": "e4531428b89186f87ae72b311899d60a7f7949bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdenis/scrutinizer-client/zipball/6c01cb571e3dd8a6d2aae466c395ca59908667ae",
-                "reference": "6c01cb571e3dd8a6d2aae466c395ca59908667ae",
+                "url": "https://api.github.com/repos/pdenis/scrutinizer-client/zipball/e4531428b89186f87ae72b311899d60a7f7949bf",
+                "reference": "e4531428b89186f87ae72b311899d60a7f7949bf",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/buzz": "v0.5",
+                "guzzle/guzzle": "3.7",
                 "php": ">=5.3.3"
             },
             "require-dev": {
@@ -879,13 +1404,60 @@
                 }
             ],
             "description": "PHP Scrutinizer Client",
-            "homepage": "http://github.com/pdenis/monitoring",
+            "homepage": "http://github.com/pdenis/scrutinizer-client",
             "keywords": [
                 "library",
                 "scrutinizer",
                 "snide"
             ],
-            "time": "2014-02-06 21:13:04"
+            "time": "2014-02-25 10:57:24"
+        },
+        {
+            "name": "snide/php-travis-client",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pdenis/travis-client.git",
+                "reference": "6925427ac2650a52a03bd23e4809cc9186bb63cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pdenis/travis-client/zipball/6925427ac2650a52a03bd23e4809cc9186bb63cd",
+                "reference": "6925427ac2650a52a03bd23e4809cc9186bb63cd",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": "3.7",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Snide\\Travis": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal DENIS",
+                    "email": "pascal.denis.75@gmail.com"
+                }
+            ],
+            "description": "PHP Travis Client",
+            "homepage": "http://github.com/pdenis/travis-client",
+            "keywords": [
+                "client",
+                "library",
+                "snide",
+                "travis"
+            ],
+            "time": "2014-02-25 10:57:12"
         },
         {
             "name": "snide/travinizer-bundle",
@@ -894,18 +1466,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdenis/SnideTravinizerBundle.git",
-                "reference": "8188d033a35c7d2d2902d14e36ac6335021ee640"
+                "reference": "b55fe929931eb071049cde9e6a8f3ad3eef1270f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdenis/SnideTravinizerBundle/zipball/8188d033a35c7d2d2902d14e36ac6335021ee640",
-                "reference": "8188d033a35c7d2d2902d14e36ac6335021ee640",
+                "url": "https://api.github.com/repos/pdenis/SnideTravinizerBundle/zipball/b55fe929931eb071049cde9e6a8f3ad3eef1270f",
+                "reference": "b55fe929931eb071049cde9e6a8f3ad3eef1270f",
                 "shasum": ""
             },
             "require": {
-                "l3l0/php-travis-client": "dev-master",
+                "kriswallsmith/buzz": "0.5",
                 "php": ">=5.3.3",
-                "snide/php-scrutinizer-client": "1.1.*",
+                "snide/php-scrutinizer-client": "dev-master",
+                "snide/php-travis-client": "dev-master",
                 "symfony/framework-bundle": "~2.3",
                 "twig/twig": "1.*"
             },
@@ -936,7 +1509,7 @@
                 "symfony",
                 "travis"
             ],
-            "time": "2014-02-17 12:03:39"
+            "time": "2014-02-26 20:16:24"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1520,16 +2093,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "1.2.15",
+            "version": "1.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "6ba4ed2895d538a039d5d5866edc4ec0424c7852"
+                "reference": "69e55e68481cf708a6db43aff0b504e31402fe27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6ba4ed2895d538a039d5d5866edc4ec0424c7852",
-                "reference": "6ba4ed2895d538a039d5d5866edc4ec0424c7852",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/69e55e68481cf708a6db43aff0b504e31402fe27",
+                "reference": "69e55e68481cf708a6db43aff0b504e31402fe27",
                 "shasum": ""
             },
             "require": {
@@ -1577,7 +2150,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-02-03 07:44:47"
+            "time": "2014-02-25 03:34:05"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1764,16 +2337,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "3.7.31",
+            "version": "3.7.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d24e9877331039582497052cc3c4d9f465b88210"
+                "reference": "2752cbb9ea5bd84c2811b34b6953f76965ec7a2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d24e9877331039582497052cc3c4d9f465b88210",
-                "reference": "d24e9877331039582497052cc3c4d9f465b88210",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2752cbb9ea5bd84c2811b34b6953f76965ec7a2f",
+                "reference": "2752cbb9ea5bd84c2811b34b6953f76965ec7a2f",
                 "shasum": ""
             },
             "require": {
@@ -1790,7 +2363,7 @@
                 "symfony/yaml": "~2.0"
             },
             "require-dev": {
-                "pear-pear/pear": "1.9.4"
+                "pear-pear.php.net/pear": "1.9.4"
             },
             "suggest": {
                 "ext-json": "*",
@@ -1834,7 +2407,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-02-03 07:46:27"
+            "time": "2014-02-25 03:47:29"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1892,8 +2465,9 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "sensio/framework-extra-bundle": 20,
-        "l3l0/php-travis-client": 20,
         "snide/travinizer-bundle": 20,
+        "snide/php-travis-client": 20,
+        "snide/php-scrutinizer-client": 20,
         "jns/xhprof-bundle": 20,
         "facebook/xhprof": 20
     },

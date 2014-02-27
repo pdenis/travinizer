@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="travinizer_repo.form.user.name">travinizer_user_type</parameter>
+        <parameter key="travinizer_repo.form.user_type.class">Travinizer\Bundle\RepoBundle\Form\Type\UserType</parameter>
+    </parameters>
+
+    <services>
+        <service id="travinizer_repo.form.user_type" class="%travinizer_repo.form.user_type.class%">
+            <tag name="form.type" alias="%travinizer_repo.form.user.name%"/>
+            <argument type="service" id="fos_user.user_manager" />
+            <argument>%snide_travinizer.model.repo.class%</argument>
+            <argument>%fos_user.model.user.class%</argument>
+        </service>
+    </services>
+</container>

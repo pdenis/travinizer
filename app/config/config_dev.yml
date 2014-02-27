@@ -29,3 +29,14 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+mattsches_version_eye:
+    api_key: 5eeac2ba8612f8d4f668
+    base_url: "https://www.versioneye.com/api/v1"
+    filesystem_cache_path: "%kernel.cache_dir%/versioneye"
+
+snide_scrutinizer:
+    repository:
+        slug: pdenis/SnideTravinizerBundle
+        type: github
+    filesystem_cache_path: "%kernel.cache_dir%/scrutinizer"
