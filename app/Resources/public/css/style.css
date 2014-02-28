@@ -349,9 +349,7 @@ h3 {
 .navbar .brand {
     padding-top:15px;
 }
-td.badges {
-    width: 335px;
-}
+
 .user-dropdown {
     background-color: #4D7A9B;
     border-radius: 15px 15px 15px 15px;
@@ -368,6 +366,25 @@ td.badges {
     color: black;
     font-family: "Open Sans",sans-serif;
     font-weight: lighter;
+}
+
+.action-dropdown {
+    background-color: #4D7A9B;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    font-weight: 500;
+}
+
+.action-dropdown .dropdown-menu {
+    background-color: #4D7A9B;
+    font-weight: 500;
+}
+.action-dropdown a {
+    color: black;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 500;
 }
 
 .row.message {

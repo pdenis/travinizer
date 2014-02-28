@@ -1,0 +1,165 @@
+{% extends 'SnideTravinizerBundle::base.html.twig' %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('/bundles/snidetravinizer/js/highcharts.js') }}"></script>
+    <script src="{{ asset('/bundles/snidetravinizer/js/theme.js') }}"></script>
+    {% if repository.metrics %}
+        {% include 'SnideTravinizerBundle:Repo:partial.metrics.html.twig' with {'metrics': repository.metrics} %}
+    {% endif %}
+    {% if repository.pdependMetrics %}
+        {% include 'SnideTravinizerBundle:Repo:partial.pdepend_metrics.html.twig' with {'metrics': repository.pdependMetrics} %}
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div id="content">
+            <div class="title">
+                <h2>
+                    <a target="_blank" href="{{ snide_travinizer_github_url(repository) }}">{{ repository.slug }}</a>
+                    <p class="pull-right">
+                        {% if repository.metrics %}
+                            {{ repository.metrics.quality|number_format(2) }} / 10
+                        {% else %}
+                            ? / 10
+                        {% endif %}
+                        <br />
+
+                    </p>
+                </h2>
+            </div>
+            <p class="desc">
+                <span class="pull-right more issues">Issues :
+                    {% if repository.metrics %}
+                        {{ repository.metrics.nbIssues }}
+                    {% else %}
+                        ?
+                    {% endif %}
+                    <br />
+                </span>
+                {{ repository.description }}
+                {% if repository.authors|length > 0 %} by
+                    {% for author in repository.authors %}
+                        {% if loop.index > 1 %}
+                            &
+                        {% endif %}
+                        {{ author.name }}
+                    {% endfor %}
+                {% endif %}
+                {% if is_granted("OWNER", repository) %}
+                    <br />
+
+                    <ul class="pull-right dropdown action-dropdown">
+
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Actions
+                            <b class="caret"></b>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li>
+                                <a tabindex="-1" href="{{ path('snide_travinizer_repo_edit', {'slug': repository.slug}) }}">Edit</a>
+                                <a tabindex="-1" href="{{ path('travinizer_repo_edit_user', {'slug': repository.slug}) }}">Manage users</a>
+                                <a tabindex="-1" href="{{ path('snide_travinizer_repo_delete', {'slug': repository.slug}) }}">Delete</a>
+                            </li>
+                        </ul>
+                    </ul>
+                {% endif %}
+
+                <br /><br />
+                {{ snide_travinizer_poser_stable_badge(repository) }}
+                {{ snide_travinizer_poser_unstable_badge(repository) }}
+                {{ snide_travinizer_poser_download_badge(repository) }}
+                {{ snide_travinizer_poser_license_badge(repository) }}
+                {% if repository.insightHash %}
+                    <span class="pull-right">
+                        {{ snide_travinizer_insight_badge(repository, 'big') }}
+                    </span>
+                {% endif %}
+
+                <br /><br />
+                <span class="more">Dependencies :</span>
+                {% if repository.dependencies|length > 0 %}
+                    {% for dependency, version in repository.dependencies %}
+                        {% if loop.index > 1 %}
+                            ,
+                        {% endif %}
+                        {{ dependency }} : {{ version }}
+                    {% endfor %}
+                {% else %}
+                    No dependencies found
+                {% endif %}
+
+            </p>
+
+            <h3>
+                Code Metrics
+                <p class="pull-right more">
+                    <a target="_blank" class="more" href="{{ snide_travinizer_scrutinizer_url(repository) }}">See more</a>
+
+                </p>
+            </h3>
+            {% if repository.metrics %}
+                <div class="metrics">
+                    <div class="span4">
+                        <div id="class_metrics"></div>
+                    </div>
+
+                    <div class="span4">
+                        <div id="operation_metrics"></div>
+                    </div>
+                    <div class="span4">
+                        <div id="operation_weight"></div>
+                    </div>
+                </div>
+            {% else %}
+                No metrics found
+            {% endif %}
+
+
+            <h3>
+                Last builds
+                <p class="pull-right"><a target="_blank" class="more" href="{{ snide_travinizer_travis_url(repository) }}">See more</a></p>
+            </h3>
+            {% if repository.builds is empty %}
+                <p>No builds found...</p>
+            {% else %}
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Date</th>
+                        <th>Message</th>
+                        <th>Commit</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for build in repository.builds|slice(0, 10) %}
+                        <tr>
+                            <td>{{ build.number }}</td>
+                            <td>{{ build.finishedAt.format('l, d M Y H:i:s') }}</td>
+                            <td>{{ build.message }}</td>
+                            <td><a target="_blank" href="{{ snide_travinizer_github_commit_url(repository, build.commit) }}">{{ build.commit }}</a></td>
+                            <td>
+                                {% if build.result == 0%}
+                                    <img width="30" src="{{ asset('/bundles/snidetravinizer/images/green.png') }}" />
+                                {% else %}
+                                    <img  width="30"  src="{{ asset('/bundles/snidetravinizer/images/red.png') }}" />
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        </div>
+        {% if repository.pdependMetrics %}
+
+            <h3>Pdepend statistics</h3>
+            <div id="pdepend_metrics"></div>
+
+        {% endif %}
+    </div>
+{% endblock %}
