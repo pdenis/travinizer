@@ -81,7 +81,7 @@ snide_travinizer:
         class: Travinizer\Bundle\RepoBundle\Repository\Doctrine\Orm\RepoRepository
         repo:
             class: Travinizer\Bundle\RepoBundle\Entity\Repo
-
+    version_eye_key: %version_eye_key%
 genemu_form:
     select2: ~
 

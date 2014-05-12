@@ -40,3 +40,8 @@ snide_scrutinizer:
         slug: pdenis/SnideTravinizerBundle
         type: github
     filesystem_cache_path: "%kernel.cache_dir%/scrutinizer"
+
+snide_travis:
+    repository:
+        slug: pdenis/SnideTravinizerBundle
+    filesystem_cache_path: "%kernel.cache_dir%/travis"

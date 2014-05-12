@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             $bundles[] = new Jns\Bundle\XhprofBundle\JnsXhprofBundle();
             $bundles[] = new Mattsches\VersionEyeBundle\MattschesVersionEyeBundle();
             $bundles[] = new Snide\Bundle\ScrutinizerBundle\SnideScrutinizerBundle();
+            $bundles[] = new Snide\Bundle\TravisBundle\SnideTravisBundle();
         }
 
         return $bundles;

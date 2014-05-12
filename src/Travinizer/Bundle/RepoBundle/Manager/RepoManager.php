@@ -4,10 +4,10 @@ namespace Travinizer\Bundle\RepoBundle\Manager;
 
 use Snide\Bundle\TravinizerBundle\Loader\ScrutinizerLoaderInterface;
 use Snide\Bundle\TravinizerBundle\Loader\TravisLoaderInterface;
+use Snide\Bundle\TravinizerBundle\Loader\VersionEyeLoaderInterface;
 use Snide\Bundle\TravinizerBundle\Manager\RepoManager as BaseRepoManager;
 use Snide\Bundle\TravinizerBundle\Model\Repo;
 use Snide\Bundle\TravinizerBundle\Reader\ComposerReaderInterface;
-use Snide\Bundle\TravinizerBundle\Repository\RepoRepositoryInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Core\SecurityContextInterface;
 use Travinizer\Bundle\RepoBundle\Repository\Doctrine\Orm\RepoRepository;
@@ -44,9 +44,10 @@ class RepoManager extends BaseRepoManager
         TravisLoaderInterface $travisLoader,
         ScrutinizerLoaderInterface $scrutinizerLoader,
         ComposerReaderInterface $composerReader,
+        VersionEyeLoaderInterface $versionEyeLoader,
         SecurityContextInterface $securityContext
     ) {
-        parent::__construct($repository, $class, $travisLoader, $scrutinizerLoader, $composerReader);
+        parent::__construct($repository, $class, $travisLoader, $scrutinizerLoader, $composerReader, $versionEyeLoader);
         $this->securityContext   = $securityContext;
     }
 
