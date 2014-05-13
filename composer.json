@@ -25,7 +25,9 @@
         "snide/php-travis-client": "dev-master",
         "mattsches/version-eye-bundle": "0.4.0",
         "snide/php-scrutinizer-client": "dev-master",
-        "snide/php-versioneye-client": "dev-master"
+        "snide/php-versioneye-client": "dev-master",
+        "snide/php-osrc-client": "dev-master"
+
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
